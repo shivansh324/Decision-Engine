@@ -1,0 +1,27 @@
+package com.trial;
+import com.trial.models.progressModel;
+
+rule "Videos"
+@Category("Videos")
+when
+progressObject : progressModel(videoProgress%10==0);
+then
+System.out.println(progressObject.getVideoProgress());
+System.out.println("Test for videos progress");
+end;
+rule "Videos1"
+@Category("Videos")
+when
+progressObject : progressModel(videoProgress%10==0);
+then
+System.out.println(progressObject.getVideoProgress());
+System.out.println("Test2 for videos progress");
+end;
+rule "PDFS"
+
+when
+progressObject : progressModel(pdfProgress%10==0);
+then
+System.out.println(progressObject.getPdfProgress());
+System.out.println("Test for PDF progress");
+end;
